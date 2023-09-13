@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body class="bg-stone-200">
+    <section
+      class="fixed z-10 top-0 right-[-360px] bg-slate-900 h-screen w-[360px] text-slate-200 duration-200 p-5 flex flex-col justify-between"
+      id="carrinho"
+    >
+      <div class="flex justify-between m-5" id="cabecalho-carrinho">
+        <p class="text-2xl">Meu carrinho</p>
+        <button
+          id="fechar-carrinho"
+          class="material-symbols-outlined hover:text-white"
+        >
+          cancel
+        </button>
+      </div>
+      <section class="h-3/5 overflow-y-auto" id="produtos-carrinho"></section>
+      <p class="text-xl ml-2" id="preco-total">Total: $0</p>
+      <button
+        class="bg-slate-200 text-slate-900 hover:bg-slate-900 hover:text-slate-200 p-1"
+        id="finalizar-compra"
+      >
+        Finalizar Compra
+      </button>
+    </section>
+
+    <header
+      class="sticky z-[2] top-0 mb-10 drop-shadow-2xl flex bg-zinc-800 justify-between px-3"
+    >
+      <img
+        class="p-2 h-16"
+        src="./assets/logo/hashtag.svg"
+        alt="Logotipo do Magazine Hashtag"
+      />
+      <div class="flex gap-2 text-slate-200">
+        <button
+          id="abrir-carrinho"
+          class="hover:text-white mx-4 material-symbols-outlined"
+        >
+          shopping_bag
+        </button>
+        <a
+          class="hover:text-white self-center material-symbols-outlined"
+          href="pedidos.html"
+        >
+        <button>
+          person
+        </button>
+        </a>
+      </div>
+    </header>
+    <main class="flex flex-col items-center">
+      <section id="filtros">
+        <form class="mb-6 p-2 flex" id="opcoes-filtro">
+          <div class="p-2">
+            <input
+              id="exibir-masculino"
+              type="radio"
+              class="peer hidden"
+              name="filtro"
+            />
+            <label
+              class="p-2 peer-checked:rounded-md peer-checked:bg-slate-900 peer-checked:text-slate-200 select-none cursor-pointer duration-300"
+              for="exibir-masculino"
+              >Masculinos</label
+            >
+          </div>
+          <div class="w-[1px] border-solid border-[1px] border-zinc-400"></div>
+          <div class="p-2">
+            <input
+              id="exibir-todos"
+              type="radio"
+              name="filtro"
+              class="peer hidden"
+              checked
+            />
+            <label
+              class="p-2 peer-checked:rounded-md peer-checked:bg-slate-900 peer-checked:text-slate-200 select-none cursor-pointer duration-300"
+              for="exibir-todos"
+              >Todos</label
+            >
+          </div>
+          <div class="w-[1px] border-solid border-[1px] border-zinc-400"></div>
+          <div class="p-2">
+            <input
+              id="exibir-feminino"
+              type="radio"
+              class="peer hidden"
+              name="filtro"
+            />
+            <label
+              class="p-2 peer-checked:rounded-md peer-checked:bg-slate-900 peer-checked:text-slate-200 select-none cursor-pointer duration-300"
+              for="exibir-feminino"
+              >Femininos</label
+            >
+          </div>
+        </form>
+      </section>
+
+      <section
+        class="flex flex-wrap justify-center"
+        id="container-produto"
+      ></section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
